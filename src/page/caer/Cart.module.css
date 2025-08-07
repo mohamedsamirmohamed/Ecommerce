@@ -1,0 +1,225 @@
+.checkout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: #f7f7f7;
+  padding: 200px 0 40px 0; /* 👈 زودنا البادينج من فوق أكثر */
+}
+
+.ordersummary {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
+  padding: 32px 24px;
+  width: 900px;         /* 👈 كبرنا العرض */
+  min-width: 480px;     /* 👈 كبرنا الحد الأدنى */
+  margin-top: 20px;
+}
+
+.ordersummary h1 {
+  font-size: 2rem;
+  color: #1a8cff;
+  margin-bottom: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.items {
+  max-height: 340px;
+  overflow-y: auto;
+  margin-bottom: 24px;
+}
+
+.item_cart {
+  border-bottom: 1px solid #eaeaea;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+}
+
+.image_name {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.image_name img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 18px;
+  border: 1px solid #eaeaea;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.content h1 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #222;
+  font-weight: 600;
+}
+
+.price_item {
+  color: #1a8cff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.quantity_control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.quantity_control button {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  color: #1a8cff;
+  transition: background 0.2s;
+}
+
+.quantity_control button:hover {
+  background: #e6f0ff;
+}
+
+.quantity {
+  font-size: 1.1rem;
+  font-weight: 500;
+  min-width: 18px;
+  text-align: center;
+  color: #333;
+}
+
+.delete_item {
+  background: none;
+  border: none;
+  color: #ff4d4f;
+  font-size: 1.2rem;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.delete_item:hover {
+  color: #b71c1c;
+}
+
+.bottom_summary {
+  margin-top: 16px;
+  border-top: 1px solid #eaeaea;
+  padding-top: 18px;
+}
+
+.shop_table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.shop_table p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.total_checkout {
+  font-size: 1.2rem;
+  color: #1a8cff;
+  font-weight: 700;
+}
+
+.button_div {
+  display: flex;
+  justify-content: center;
+}
+
+.button_div button {
+  background: #1a8cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button_div button:hover {
+  background: #1766b6;
+}
+
+@media (max-width: 600px) {
+  .ordersummary {
+    width: 98vw;
+    min-width: unset;
+    padding: 16px 4vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ordersummary {
+    padding: 24px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ordersummary {
+    padding: 20px;
+  }
+
+  .content h1 {
+    font-size: 1rem;
+  }
+
+  .price_item,
+  .quantity {
+    font-size: 0.95rem;
+  }
+
+  .quantity_control button {
+    width: 24px;
+    height: 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ordersummary {
+    width: 100%;
+    padding: 16px 12px;
+    border-radius: 8px;
+  }
+
+  .image_name img {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+  }
+
+  .content h1 {
+    font-size: 0.95rem;
+  }
+
+  .button_div button {
+    padding: 10px 20px;
+    font-size: 1rem; 
+  }
+}

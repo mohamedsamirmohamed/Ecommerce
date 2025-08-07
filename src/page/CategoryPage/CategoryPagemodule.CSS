@@ -1,0 +1,36 @@
+:root {
+  --main_color: #007bff;
+  --p_color: #555;
+  --border_color: #ccc;
+}
+
+.top_slide {
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border_color);
+  padding: 15px 20px 20px 0;
+}
+
+.top_slide::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: var(--main_color);
+}
+
+.top_slide h2 {
+  color: var(--main_color);
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.top_slide p {
+  color: var(--p_color);
+  font-size: 1rem;
+  margin: 0;
+}
