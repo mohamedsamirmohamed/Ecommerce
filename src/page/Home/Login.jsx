@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 export default function Login() {
 
  const navigate = useNavigate();
@@ -131,7 +131,7 @@ if (data.user?.token) {
                                     </div>
 
                                     <div className="text-center">
-                                        <p className="mb-0">Don't have an account? <a href="/" className="text-primary">Sign up</a></p>
+                                        <p className="mb-0">Don't have an account? <Link to="/" className="text-primary">Sign up</Link></p>
                                     </div>
 
                                 </form>

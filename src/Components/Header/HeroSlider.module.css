@@ -35,27 +35,29 @@
   top: 50%;
   transform: translateY(-50%);
   left: 5%;
+  z-index: 2;
+  max-width: 600px;
 }
 
 .content h4 {
   text-transform: uppercase;
-  font-size: 1vw;
+  font-size: clamp(12px, 1.5vw, 18px);
   font-style: italic;
   font-weight: normal;
-  margin-bottom: 0.4vw;
+  margin-bottom: 10px;
 }
 
 .content h3 {
-  font-size: 3vw;
+  font-size: clamp(20px, 4vw, 40px);
   text-transform: capitalize;
   margin-bottom: 30px;
   color: var(--main_color);
   font-weight: bolder;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .content p {
-  font-size: 1vw;
+  font-size: clamp(12px, 1.2vw, 16px);
   color: var(--p_color);
   margin-bottom: 20px;
 }
@@ -70,43 +72,49 @@
   border-radius: 5px;
   font-weight: bold;
   transition: 0.3s;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
 .btn:hover {
   background-color: #0077cc;
 }
 
-
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .mySwiper {
-    padding-top: 80px; /* نصّف المسافة العلوية عشان تبقى أقل */
+    padding-top: 100px;
   }
 
   .content {
-    position: static; /* نخلي المحتوى في التدفق الطبيعي */
+    position: static;
     transform: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     text-align: center;
   }
 
-  .content h4 {
-    font-size: 3vw; /* أكبر نسبياً عشان تقرأها كويس */
-    margin-bottom: 8px;
-  }
-
   .content h3 {
-    font-size: 6vw; /* أكبر للنص الرئيسي */
     margin-bottom: 20px;
-    line-height: 1.2;
-  }
-
-  .content p {
-    font-size: 3.5vw;
-    margin-bottom: 15px;
   }
 
   .btn {
     padding: 12px 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content h4 {
     font-size: 4vw;
+  }
+
+  .content h3 {
+    font-size: 7vw;
+  }
+
+  .content p {
+    font-size: 4vw;
+  }
+
+  .btn {
+    font-size: 4vw;
+    padding: 10px 20px;
   }
 }
